@@ -1,4 +1,4 @@
-package prog2.exercise4.flight.booking.system;
+package prog2.exercise3.flight.booking.system;
 
 //import java.sql.Date;
 //import java.text.SimpleDateFormat;
@@ -226,6 +226,7 @@ public class FlightBooking {
 
     // TODO- add logic to set ticket number
     public void setTicketNumber(String fullName) {
+
         
         this.ticketNumber = "11FASDFDOM";
     }
@@ -371,5 +372,3 @@ public class FlightBooking {
     }
 
 }
-
-
