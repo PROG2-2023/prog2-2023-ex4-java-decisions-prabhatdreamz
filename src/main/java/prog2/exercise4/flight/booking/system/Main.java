@@ -1,4 +1,4 @@
-package prog2.exercise4.flight.booking.system;
+package prog2.exercise3.flight.booking.system;
 
 import java.time.LocalDate;
 import java.util.Scanner;
