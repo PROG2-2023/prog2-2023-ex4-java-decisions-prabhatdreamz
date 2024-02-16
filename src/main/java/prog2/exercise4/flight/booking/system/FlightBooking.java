@@ -1,20 +1,12 @@
-package prog2.exercise3.flight.booking.system;
+package prog2.exercise4.flight.booking.system;
 
-//import java.sql.Date;
-//import java.text.SimpleDateFormat;
+
 import java.time.LocalDate;
-import java.util.Date;
-//import java.time.LocalDateTime;
-//import java.time.Period;
-//import java.time.format.DateTimeFormatter;
-
-import javax.management.Descriptor;
-import javax.xml.transform.Source;
 
 public class FlightBooking {
-    private String flightID;
+    
     private String passengerFullName;
-    private String passengerAddress;
+    
 
     enum TripType{
         ONE_WAY, RETURN;
@@ -64,8 +56,7 @@ public class FlightBooking {
     
     public FlightBooking(String fullName, LocalDate departureDate, LocalDate returnDate, int children, int adults) {
         passengerFullName = fullName;
-        //passengerAddress = address;
-        //this.tripType = tripType;
+        
         this.departureDate = departureDate;
         this.returnDate = returnDate;
         childPassengers = children;
@@ -267,15 +258,6 @@ public class FlightBooking {
             return "Economy";
         }
     }
-
-    private String calcualteTripType(){
-        if(tripType.equals(TripType.ONE_WAY)){
-            return "One way";
-        }
-        else {
-            return "Return";
-        }
-    }
     
     public void setDepartingTicketPrice(int child, int adults){
         
@@ -285,22 +267,22 @@ public class FlightBooking {
         double priceComponent1 = 0;
 
         if((tripScope == "Domestic") && (bClass == "First")){
-            priceComponent1 = ((child*(300 * (0.1*300) + (0.05*300))) + (adults*(300 * (0.1*300) + (0.05*300)))) + 250;
+            priceComponent1 = (((child *((300 + (0.1*300)) + (0.05*300))) + (adults*((300 + (0.1*300)) + (0.05*300)))) + 250);
         }
         else if((tripScope == "Domestic") && (bClass == "Business")){
-            priceComponent1 = ((child*(300 * (0.1*300) + (0.05*300))) + (adults*(300 * (0.1*300) + (0.05*300)))) + 150;
+            priceComponent1 = ((child*(300 + (0.1*300) + (0.05*300))) + (adults*(300 + (0.1*300) + (0.05*300)))) + 150;
         }
         else if((tripScope == "Domestic") && (bClass == "Economy")){
-            priceComponent1 = ((child*(300 * (0.1*300) + (0.05*300))) + (adults*(300 * (0.1*300) + (0.05*300)))) + 50;
+            priceComponent1 = ((child*(300 + (0.1*300) + (0.05*300))) + (adults*(300 + (0.1*300) + (0.05*300)))) + 50;
         }
         else if((tripScope == "International") && (bClass == "First")){
-            priceComponent1 = ((child*(300 * (0.15*300) + (0.1*300))) + (adults*(300 * (0.15*300) + (0.1*300)))) + 250;
+            priceComponent1 = ((child*(300 + (0.15*300) + (0.1*300))) + (adults*(300 + (0.15*300) + (0.1*300)))) + 250;
         }
         else if((tripScope == "International") && (bClass == "Business")){
-            priceComponent1 = ((child*(300 * (0.15*300) + (0.1*300))) + (adults*(300 * (0.15*300) + (0.1*300)))) + 150;
+            priceComponent1 = ((child*(300 + (0.15*300) + (0.1*300))) + (adults*(300 + (0.15*300) + (0.1*300)))) + 150;
         }
         else if((tripScope == "International") && (bClass == "Economy")){
-            priceComponent1 = ((child*(300 * (0.15*300) + (0.1*300))) + (adults*(300 * (0.15*300) + (0.1*300)))) + 50;
+            priceComponent1 = ((child*(300 + (0.15*300) + (0.1*300))) + (adults*(300 + (0.15*300) + (0.1*300)))) + 50;
         }
         else{
             departingTicketPrice = 0;

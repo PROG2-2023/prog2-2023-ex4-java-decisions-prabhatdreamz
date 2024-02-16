@@ -1,12 +1,8 @@
-package prog2.exercise3.flight.booking.system;
+package prog2.exercise4.flight.booking.system;
 
 import java.time.LocalDate;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class Main 
 {
     public static void main( String[] args )
@@ -52,17 +48,6 @@ public class Main
 
         flightbooking.setDepartureDate(departureDate);
         flightbooking.setReturnDate(returnDate2);
-
-
-/* 
-        flightbooking.setTotalPassengers(children, adults);
-        flightbooking.setFlightID(name);
-        flightbooking.setTicketNumber(name);
-        flightbooking.setDepartureDate(depart);
-        flightbooking.setReturnDate(returnDate);
-        flightbooking.setDepartingTicketPrice(children, adults);
-        flightbooking.setReturnTicketPrice();
-        flightbooking.setTotalTicketPrice();*/
     
         System.out.println(flightbooking);
         

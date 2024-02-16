@@ -1,4 +1,4 @@
-package prog2.exercise3.flight.booking.system;
+package prog2.exercise4.flight.booking.system;
 
 import static org.junit.Assert.assertEquals;
 import java.time.LocalDate;
